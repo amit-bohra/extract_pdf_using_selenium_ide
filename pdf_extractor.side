@@ -1,0 +1,72 @@
+{
+  "id": "ad731f76-5d13-421a-a9ea-7640e1d1f4bd",
+  "version": "2.0",
+  "name": "pdf_extractor",
+  "url": "https://www.drishtiias.com/",
+  "tests": [{
+    "id": "a6a1d0c3-ceb3-4a05-b7f6-98f93623db3b",
+    "name": "getPDF",
+    "commands": [{
+      "id": "e2d7d010-3bbb-4754-adb4-54996497c503",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.drishtiias.com/current-affairs-news-analysis-editorials",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "db42d64d-f113-4a3b-92c8-61398867dedd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.column:nth-child(1) li:nth-child(1) > a",
+      "targets": [
+        ["linkText=02 March 2024", "linkText"],
+        ["css=.column:nth-child(1) li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(@href, 'https://www.drishtiias.com/current-affairs-news-analysis-editorials/news-analysis/02-03-2024')]", "xpath:href"],
+        ["xpath=//article/div/div/div/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'02 March 2024')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win2283",
+      "windowTimeout": 2000
+    }, {
+      "id": "053e1772-9081-4b81-ab26-8c2040bb4382",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win2283}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e5a254c8-72f4-481d-8463-8db492e53d5a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn.pdf",
+      "targets": [],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win2284",
+      "windowTimeout": 2000
+    }]
+  }, {
+    "id": "e9feb700-75e1-4ab0-81a6-cb4852031ca2",
+    "name": "getTwo",
+    "commands": [{
+      "id": "6a2cb733-f6a6-44f6-b4ac-7c558c71b81d",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.drishtiias.com/pdf/1709384734.pdf",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "12990dbd-ed7a-4fb5-8bb7-899960655389",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://www.drishtiias.com/", "https://www.drishtiias.com/current-affairs-news-analysis-editorials"],
+  "plugins": []
+}
